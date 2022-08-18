@@ -1,111 +1,67 @@
 package ru.netology.project;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+
 public class Radio {
 
-    public int currentStation;
-    public int currentVolume;
-    public int firstStation;
-    public int lastStation;
-    public int minVolume;
-    public int maxVolume;
+    private int currentStation;
+    private int currentVolume;
+    private int firstStation = 0;
+    private int lastStation = 12;
+    private int minVolume = 0;
+    private int maxVolume = 100;
 
-    public int getCurrentStation() {
-        return currentStation;
+    public Radio(int newStationAdded) {
+        this.currentStation = newStationAdded;
+        lastStation = newStationAdded - 1;
     }
 
-    public int getFirstStation() {
-        return firstStation;
-    }
-
-    public void setFirstStation(int firstStation) {
-        this.firstStation = firstStation;
-    }
-
-    public int getLastStation() {
-        return lastStation;
-    }
-
-    public void setLastStation(int lastStation) {
-        this.lastStation = lastStation;
-    }
-
-    public void setCurrentStation(int newCurrentStation) {
-        if (newCurrentStation > lastStation) {
+    public void setCurrentStation(int currentStation) {
+        if (currentStation > lastStation) {
             return;
         }
-        if (newCurrentStation < firstStation) {
+        if (currentStation < firstStation) {
             return;
         }
-        currentStation = newCurrentStation;
+        this.currentStation = currentStation;
     }
 
-    public void nextStation() {
+    public void chooseNextStation() {
         if (currentStation >= lastStation) {
             setCurrentStation(firstStation);
         } else {
             setCurrentStation(currentStation + 1);
         }
     }
-
-    public void previousStation() {
-        if (currentStation <= firstStation) {
-            setCurrentStation(lastStation);
-        } else {
-            setCurrentStation(currentStation - 1);
-        }
-    }
-
-    public int getCurrentVolume() {
-        return currentVolume;
-    }
-
-    public int getMaxVolume() {
-        return maxVolume;
-    }
-
-    public void setMaxVolume(int maxVolume) {
-        this.maxVolume = maxVolume;
-    }
-
-    public int getMinVolume() {
-        return minVolume;
-    }
-
-    public void setMinVolume(int minVolume) {
-        this.minVolume = minVolume;
-    }
-
-    public void setCurrentVolume(int newCurrentVolume) {
-        if (newCurrentVolume > maxVolume) {
-            return;
-        }
-        if (newCurrentVolume < minVolume) {
-            return;
-        }
-        currentVolume = newCurrentVolume;
-    }
-
-    public void volumeUp() {
-        if (currentVolume < maxVolume) {
-            currentVolume = currentVolume + 1;
-        }
-    }
-
-    public void volumeDown() {
-        if (currentVolume > minVolume) {
-            currentVolume = currentVolume - 1;
-        }
-    }
-
-        public void chooseCurrentStation(int currentStation) {
-            if (currentStation > lastStation) {
-                this.currentStation = lastStation;
-            } else
-            if (currentStation < firstStation) {
-                this.currentStation = firstStation;
+        public void choosePreviousStation() {
+            if(currentStation <= firstStation) {
+                setCurrentStation(lastStation);
             } else {
-                this.currentStation = currentStation;
+                setCurrentStation(currentStation - 1);
             }
         }
-    }
 
+        public void setCurrentVolume(int currentVolume) {
+        if (currentVolume > maxVolume) {
+            return;
+        }
+        if (currentVolume < minVolume) {
+            return;
+        }
+        this.currentVolume = currentVolume;
+        }
+
+        public void volumeUp() {
+        setCurrentVolume(currentVolume + 1);
+        }
+
+        public void volumeDown() {
+        setCurrentVolume(currentVolume - 1);
+        }
+    }
