@@ -4,10 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@NoArgsConstructor
-@AllArgsConstructor
-@Data
-
 public class Radio {
 
     private int currentStation;
@@ -20,6 +16,10 @@ public class Radio {
     public Radio(int newStationAdded) {
         this.currentStation = newStationAdded;
         lastStation = newStationAdded - 1;
+    }
+
+    public Radio() {
+
     }
 
     public int getCurrentStation() {
