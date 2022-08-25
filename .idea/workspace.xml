@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ae35242d-a3c2-47dd-a1b8-9dcca3ea54fb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/netology/project/Radio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/netology/project/RadioTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,21 +32,23 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_directory_selection": "C:/Radioman/src/test/java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Radioman/src/test/java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;
   }
-}]]></component>
+}</component>
   <component name="RunAnythingCache">
     <option name="myCommands">
+      <command value="mvn clean test" />
       <command value="mvn clean verify" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RadioTest">
-    <configuration name="RadioTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.RadioTest.shouldSetLastStation">
+    <configuration name="RadioTest.shouldAddNewStation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Radioman" />
       <extension name="coverage">
         <pattern>
@@ -61,28 +58,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="ru.netology.project" />
       <option name="MAIN_CLASS_NAME" value="ru.netology.project.RadioTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RadioTest.shouldSetStationAfterLast" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Radioman" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.netology.project.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.netology.project" />
-      <option name="MAIN_CLASS_NAME" value="ru.netology.project.RadioTest" />
-      <option name="METHOD_NAME" value="shouldSetStationAfterLast" />
+      <option name="METHOD_NAME" value="shouldAddNewStation" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RadioTest.shouldSetStationBeforeFirst" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RadioTest.shouldAddNewStation1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Radioman" />
       <extension name="coverage">
         <pattern>
@@ -92,13 +74,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="ru.netology.project" />
       <option name="MAIN_CLASS_NAME" value="ru.netology.project.RadioTest" />
-      <option name="METHOD_NAME" value="shouldSetStationBeforeFirst" />
+      <option name="METHOD_NAME" value="shouldAddNewStation1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RadioTest.shouldSetVolumeDownBelowMin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RadioTest.shouldAddNewStation2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Radioman" />
       <extension name="coverage">
         <pattern>
@@ -108,13 +90,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="ru.netology.project" />
       <option name="MAIN_CLASS_NAME" value="ru.netology.project.RadioTest" />
-      <option name="METHOD_NAME" value="shouldSetVolumeDownBelowMin" />
+      <option name="METHOD_NAME" value="shouldAddNewStation2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RadioTest.shouldSetVolumeOverMax" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RadioTest.shouldChooseCurrentStationAfterLast" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Radioman" />
       <extension name="coverage">
         <pattern>
@@ -124,7 +106,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="ru.netology.project" />
       <option name="MAIN_CLASS_NAME" value="ru.netology.project.RadioTest" />
-      <option name="METHOD_NAME" value="shouldSetVolumeOverMax" />
+      <option name="METHOD_NAME" value="shouldChooseCurrentStationAfterLast" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RadioTest.shouldSetLastStation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Radioman" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.netology.project.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.netology.project" />
+      <option name="MAIN_CLASS_NAME" value="ru.netology.project.RadioTest" />
+      <option name="METHOD_NAME" value="shouldSetLastStation" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -132,11 +130,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RadioTest" />
-        <item itemvalue="JUnit.RadioTest.shouldSetStationAfterLast" />
-        <item itemvalue="JUnit.RadioTest.shouldSetStationBeforeFirst" />
-        <item itemvalue="JUnit.RadioTest.shouldSetVolumeOverMax" />
-        <item itemvalue="JUnit.RadioTest.shouldSetVolumeDownBelowMin" />
+        <item itemvalue="JUnit.RadioTest.shouldSetLastStation" />
+        <item itemvalue="JUnit.RadioTest.shouldAddNewStation2" />
+        <item itemvalue="JUnit.RadioTest.shouldAddNewStation" />
+        <item itemvalue="JUnit.RadioTest.shouldAddNewStation1" />
+        <item itemvalue="JUnit.RadioTest.shouldChooseCurrentStationAfterLast" />
       </list>
     </recent_temporary>
   </component>
@@ -158,10 +156,9 @@
         <PinnedItemInfo parentTag="ru.netology.project.Radio" memberName="currentStation" />
       </pinned-members>
     </pin-to-top-manager>
-    <watches-manager>
-      <inline-watch fileUrl="file://$PROJECT_DIR$/src/main/java/ru/netology/project/Radio.java" line="58">
-        <watch expression="((Radio)this).currentVolume" language="JAVA" custom="ru.netology.project.Radio" />
-      </inline-watch>
-    </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -1,16 +1,33 @@
 package ru.netology.project;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 public class Radio {
 
-    public int currentStation;
-    public int currentVolume;
-    public int firstStation;
-    public int lastStation;
-    public int minVolume;
-    public int maxVolume;
+    private int currentStation;
+    private int currentVolume;
+    private int firstStation = 0;
+    private int lastStation = 12;
+    private int minVolume = 0;
+    private int maxVolume = 100;
+
+    public Radio(int newStationAdded) {
+        this.currentStation = newStationAdded;
+        lastStation = newStationAdded - 1;
+    }
+
+    public Radio() {
+
+    }
 
     public int getCurrentStation() {
         return currentStation;
+    }
+
+    public int getCurrentVolume() {
+        return currentVolume;
     }
 
     public int getFirstStation() {
@@ -29,34 +46,12 @@ public class Radio {
         this.lastStation = lastStation;
     }
 
-    public void setCurrentStation(int newCurrentStation) {
-        if (newCurrentStation > lastStation) {
-            return;
-        }
-        if (newCurrentStation < firstStation) {
-            return;
-        }
-        currentStation = newCurrentStation;
+    public int getMinVolume() {
+        return minVolume;
     }
 
-    public void nextStation() {
-        if (currentStation >= lastStation) {
-            setCurrentStation(firstStation);
-        } else {
-            setCurrentStation(currentStation + 1);
-        }
-    }
-
-    public void previousStation() {
-        if (currentStation <= firstStation) {
-            setCurrentStation(lastStation);
-        } else {
-            setCurrentStation(currentStation - 1);
-        }
-    }
-
-    public int getCurrentVolume() {
-        return currentVolume;
+    public void setMinVolume(int minVolume) {
+        this.minVolume = minVolume;
     }
 
     public int getMaxVolume() {
@@ -67,45 +62,46 @@ public class Radio {
         this.maxVolume = maxVolume;
     }
 
-    public int getMinVolume() {
-        return minVolume;
-    }
-
-    public void setMinVolume(int minVolume) {
-        this.minVolume = minVolume;
-    }
-
-    public void setCurrentVolume(int newCurrentVolume) {
-        if (newCurrentVolume > maxVolume) {
+    public void setCurrentStation(int currentStation) {
+        if (currentStation > lastStation) {
             return;
         }
-        if (newCurrentVolume < minVolume) {
+        if (currentStation < firstStation) {
             return;
         }
-        currentVolume = newCurrentVolume;
+        this.currentStation = currentStation;
     }
 
-    public void volumeUp() {
-        if (currentVolume < maxVolume) {
-            currentVolume = currentVolume + 1;
+    public void chooseNextStation() {
+        if (currentStation >= lastStation) {
+            setCurrentStation(firstStation);
+        } else {
+            setCurrentStation(currentStation + 1);
         }
     }
-
-    public void volumeDown() {
-        if (currentVolume > minVolume) {
-            currentVolume = currentVolume - 1;
-        }
-    }
-
-        public void chooseCurrentStation(int currentStation) {
-            if (currentStation > lastStation) {
-                this.currentStation = lastStation;
-            } else
-            if (currentStation < firstStation) {
-                this.currentStation = firstStation;
+        public void choosePreviousStation() {
+            if(currentStation <= firstStation) {
+                setCurrentStation(lastStation);
             } else {
-                this.currentStation = currentStation;
+                setCurrentStation(currentStation - 1);
             }
         }
-    }
 
+        public void setCurrentVolume(int currentVolume) {
+        if (currentVolume > maxVolume) {
+            return;
+        }
+        if (currentVolume < minVolume) {
+            return;
+        }
+        this.currentVolume = currentVolume;
+        }
+
+        public void volumeUp() {
+        setCurrentVolume(currentVolume + 1);
+        }
+
+        public void volumeDown() {
+        setCurrentVolume(currentVolume - 1);
+        }
+    }
