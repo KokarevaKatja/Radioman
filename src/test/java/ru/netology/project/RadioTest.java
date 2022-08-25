@@ -273,6 +273,8 @@ public class RadioTest {
     @Test
     public void shouldSetMaxVolume() {
 
+        radio.setMaxVolume(100);
+
         int expected = 100;
         int actual = radio.getMaxVolume();
 
@@ -281,6 +283,8 @@ public class RadioTest {
 
     @Test
     public void shouldSetMinVolume() {
+
+        radio.setMinVolume(0);
 
         int expected = 0;
         int actual = radio.getMinVolume();
@@ -291,6 +295,8 @@ public class RadioTest {
     @Test
     public void shouldSetLastStation() {
 
+        radio.setLastStation(12);
+
         int expected = 12;
         int actual = radio.getLastStation();
 
@@ -298,6 +304,8 @@ public class RadioTest {
     }
     @Test
     public void shouldSetFirstStation() {
+
+        radio.setFirstStation(0);
 
         int expected = 0;
         int actual = radio.getFirstStation();
@@ -334,4 +342,6 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
+
 }
